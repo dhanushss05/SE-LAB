@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0 -- /Users/dhanushsulthan/.venvs/se-lab/bin/python
+hypothesis profile 'default'
+rootdir: /Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush
+plugins: hypothesis-6.170.15
+collecting ... collected 10 items
+
+test_parking_fee.py::test_minutes_parked_no_crash PASSED                 [ 10%]
+test_parking_fee.py::test_minutes_parked_no_crash_on_shaped_input PASSED [ 20%]
+test_parking_fee.py::test_minutes_parked_never_negative_or_too_long PASSED [ 30%]
+test_parking_fee.py::test_minutes_parked_valid_times PASSED              [ 40%]
+test_parking_fee.py::test_hourly_rate_no_crash PASSED                    [ 50%]
+test_parking_fee.py::test_hourly_rate_returns_known_rate_or_none PASSED  [ 60%]
+test_parking_fee.py::test_hourly_rate_valid_vehicles PASSED              [ 70%]
+test_parking_fee.py::test_format_plate_no_crash PASSED                   [ 80%]
+test_parking_fee.py::test_format_plate_output_is_well_formed PASSED      [ 90%]
+test_parking_fee.py::test_format_plate_valid_plates PASSED               [100%]
+
+============================== 10 passed in 0.42s ==============================
