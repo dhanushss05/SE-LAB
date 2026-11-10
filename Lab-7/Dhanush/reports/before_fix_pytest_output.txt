@@ -1,0 +1,451 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush
+plugins: hypothesis-6.170.15
+collected 10 items
+
+test_parking_fee.py FFFFFF.FF.                                           [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_minutes_parked_no_crash _________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 36, in test_minutes_parked_no_crash
+  |     def test_minutes_parked_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 38, in test_minutes_parked_no_crash
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 5, in minutes_parked
+    |     h1, m1 = entry.split(':')
+    |     ^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 40, in test_minutes_parked_no_crash
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash(
+    |     s='-',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 38, in test_minutes_parked_no_crash
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |     ^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 40, in test_minutes_parked_no_crash
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 38, in test_minutes_parked_no_crash
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |                        ^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 40, in test_minutes_parked_no_crash
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: AttributeError("'NoneType' object has no attribute 'split'")
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+_________________ test_minutes_parked_no_crash_on_shaped_input _________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 44, in test_minutes_parked_no_crash_on_shaped_input
+  |     def test_minutes_parked_no_crash_on_shaped_input(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 46, in test_minutes_parked_no_crash_on_shaped_input
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 7, in minutes_parked
+    |     return (int(h2) * 60 + int(m2)) - (int(h1) * 60 + int(m1))
+    |             ~~~^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 48, in test_minutes_parked_no_crash_on_shaped_input
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError("invalid literal for int() with base 10: ''")
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash_on_shaped_input(
+    |     s=':-:',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 46, in test_minutes_parked_no_crash_on_shaped_input
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 6, in minutes_parked
+    |     h2, m2 = exit_time.split(':')
+    |     ^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 48, in test_minutes_parked_no_crash_on_shaped_input
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash_on_shaped_input(
+    |     s=':-',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 46, in test_minutes_parked_no_crash_on_shaped_input
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 5, in minutes_parked
+    |     h1, m1 = entry.split(':')
+    |     ^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 48, in test_minutes_parked_no_crash_on_shaped_input
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash_on_shaped_input(
+    |     s='-',
+    | )
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 46, in test_minutes_parked_no_crash_on_shaped_input
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |     ^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 48, in test_minutes_parked_no_crash_on_shaped_input
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash_on_shaped_input(
+    |     s='',
+    | )
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 46, in test_minutes_parked_no_crash_on_shaped_input
+    |     minutes_parked(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |                        ^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 48, in test_minutes_parked_no_crash_on_shaped_input
+    |     assert False, f"minutes_parked crashed with: {e!r}"
+    | AssertionError: minutes_parked crashed with: AttributeError("'NoneType' object has no attribute 'split'")
+    | assert False
+    | Failing test case: test_minutes_parked_no_crash_on_shaped_input(
+    |     s=None,
+    | )
+    +------------------------------------
+________________ test_minutes_parked_never_negative_or_too_long ________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 52, in test_minutes_parked_never_negative_or_too_long
+  |     def test_minutes_parked_never_negative_or_too_long(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 53, in test_minutes_parked_never_negative_or_too_long
+    |     result = minutes_parked(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 7, in minutes_parked
+    |     return (int(h2) * 60 + int(m2)) - (int(h1) * 60 + int(m1))
+    |             ~~~^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | Failing test case: test_minutes_parked_never_negative_or_too_long(
+    |     s=':-:',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 53, in test_minutes_parked_never_negative_or_too_long
+    |     result = minutes_parked(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 6, in minutes_parked
+    |     h2, m2 = exit_time.split(':')
+    |     ^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_minutes_parked_never_negative_or_too_long(
+    |     s=':-',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 53, in test_minutes_parked_never_negative_or_too_long
+    |     result = minutes_parked(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 5, in minutes_parked
+    |     h1, m1 = entry.split(':')
+    |     ^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_minutes_parked_never_negative_or_too_long(
+    |     s='-',
+    | )
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 53, in test_minutes_parked_never_negative_or_too_long
+    |     result = minutes_parked(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |     ^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_minutes_parked_never_negative_or_too_long(
+    |     s='',
+    | )
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 53, in test_minutes_parked_never_negative_or_too_long
+    |     result = minutes_parked(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 4, in minutes_parked
+    |     entry, exit_time = times.split('-')
+    |                        ^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_minutes_parked_never_negative_or_too_long(
+    |     s=None,
+    | )
+    +------------------------------------
+_______________________ test_minutes_parked_valid_times ________________________
+
+    @given(hours, mins, hours, mins)
+>   def test_minutes_parked_valid_times(h1, m1, h2, m2):
+                   ^^^
+
+test_parking_fee.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+h1 = 0, m1 = 1, h2 = 0, m2 = 0
+
+    @given(hours, mins, hours, mins)
+    def test_minutes_parked_valid_times(h1, m1, h2, m2):
+        start, end = h1 * 60 + m1, h2 * 60 + m2
+        s = f"{h1:02d}:{m1:02d}-{h2:02d}:{m2:02d}"
+        if end >= start:
+            assert minutes_parked(s) == end - start
+        else:
+            # exit before entry is not a valid stay
+>           assert minutes_parked(s) is None
+E           AssertionError: assert -1 is None
+E            +  where -1 = minutes_parked('00:01-00:00')
+E           Failing test case: test_minutes_parked_valid_times(
+E               h1=0,
+E               m1=1,
+E               h2=0,
+E               m2=0,
+E           )
+
+test_parking_fee.py:66: AssertionError
+__________________________ test_hourly_rate_no_crash ___________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 72, in test_hourly_rate_no_crash
+  |     def test_hourly_rate_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 74, in test_hourly_rate_no_crash
+    |     hourly_rate(s)
+    |     ~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 10, in hourly_rate
+    |     return RATES[vehicle.strip().lower()]
+    |            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 76, in test_hourly_rate_no_crash
+    |     assert False, f"hourly_rate crashed with: {e!r}"
+    | AssertionError: hourly_rate crashed with: KeyError('')
+    | assert False
+    | Failing test case: test_hourly_rate_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 74, in test_hourly_rate_no_crash
+    |     hourly_rate(s)
+    |     ~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 10, in hourly_rate
+    |     return RATES[vehicle.strip().lower()]
+    |                  ^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 76, in test_hourly_rate_no_crash
+    |     assert False, f"hourly_rate crashed with: {e!r}"
+    | AssertionError: hourly_rate crashed with: AttributeError("'NoneType' object has no attribute 'strip'")
+    | assert False
+    | Failing test case: test_hourly_rate_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+_________________ test_hourly_rate_returns_known_rate_or_none __________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 80, in test_hourly_rate_returns_known_rate_or_none
+  |     def test_hourly_rate_returns_known_rate_or_none(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 81, in test_hourly_rate_returns_known_rate_or_none
+    |     assert hourly_rate(s) in (None, 10, 30, 60)
+    |            ~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 10, in hourly_rate
+    |     return RATES[vehicle.strip().lower()]
+    |            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+    | KeyError: ''
+    | Failing test case: test_hourly_rate_returns_known_rate_or_none(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 81, in test_hourly_rate_returns_known_rate_or_none
+    |     assert hourly_rate(s) in (None, 10, 30, 60)
+    |            ~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 10, in hourly_rate
+    |     return RATES[vehicle.strip().lower()]
+    |                  ^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | Failing test case: test_hourly_rate_returns_known_rate_or_none(
+    |     s=None,
+    | )
+    +------------------------------------
+__________________________ test_format_plate_no_crash __________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 99, in test_format_plate_no_crash
+  |     def test_format_plate_no_crash(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 101, in test_format_plate_no_crash
+    |     format_plate(s)
+    |     ~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 14, in format_plate
+    |     return p[0] + p[1] + " " + p[2:4] + " " + p[4:6] + " " + p[6:10]
+    |            ~^^^
+    | IndexError: string index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 103, in test_format_plate_no_crash
+    |     assert False, f"format_plate crashed with: {e!r}"
+    | AssertionError: format_plate crashed with: IndexError('string index out of range')
+    | assert False
+    | Failing test case: test_format_plate_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 101, in test_format_plate_no_crash
+    |     format_plate(s)
+    |     ~~~~~~~~~~~~^^^
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 13, in format_plate
+    |     p = plate.upper()
+    |         ^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'upper'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 103, in test_format_plate_no_crash
+    |     assert False, f"format_plate crashed with: {e!r}"
+    | AssertionError: format_plate crashed with: AttributeError("'NoneType' object has no attribute 'upper'")
+    | assert False
+    | Failing test case: test_format_plate_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+___________________ test_format_plate_output_is_well_formed ____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 107, in test_format_plate_output_is_well_formed
+  |     def test_format_plate_output_is_well_formed(s):
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 109, in test_format_plate_output_is_well_formed
+    |     assert result is None or PLATE_OUT.fullmatch(result), \
+    |         f"format_plate({s!r}) returned {result!r}"
+    | AssertionError: format_plate('00') returned '00   '
+    | assert ('00   ' is None or None)
+    |  +  where None = <built-in method fullmatch of re.Pattern object at 0x10c2cc2e0>('00   ')
+    |  +    where <built-in method fullmatch of re.Pattern object at 0x10c2cc2e0> = re.compile('[A-Z]{2} [0-9]{2} [A-Z]{2} [0-9]{4}').fullmatch
+    | Failing test case: test_format_plate_output_is_well_formed(
+    |     s='00',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 108, in test_format_plate_output_is_well_formed
+    |     result = format_plate(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 14, in format_plate
+    |     return p[0] + p[1] + " " + p[2:4] + " " + p[4:6] + " " + p[6:10]
+    |            ~^^^
+    | IndexError: string index out of range
+    | Failing test case: test_format_plate_output_is_well_formed(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/test_parking_fee.py", line 108, in test_format_plate_output_is_well_formed
+    |     result = format_plate(s)
+    |   File "/Users/dhanushsulthan/Desktop/SE-LAB/Lab-7/Dhanush/parking_fee.py", line 13, in format_plate
+    |     p = plate.upper()
+    |         ^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'upper'
+    | Failing test case: test_format_plate_output_is_well_formed(
+    |     s=None,
+    | )
+    +------------------------------------
+=========================== short test summary info ============================
+FAILED test_parking_fee.py::test_minutes_parked_no_crash - ExceptionGroup: Hy...
+FAILED test_parking_fee.py::test_minutes_parked_no_crash_on_shaped_input - Ex...
+FAILED test_parking_fee.py::test_minutes_parked_never_negative_or_too_long - ...
+FAILED test_parking_fee.py::test_minutes_parked_valid_times - AssertionError:...
+FAILED test_parking_fee.py::test_hourly_rate_no_crash - ExceptionGroup: Hypot...
+FAILED test_parking_fee.py::test_hourly_rate_returns_known_rate_or_none - Exc...
+FAILED test_parking_fee.py::test_format_plate_no_crash - ExceptionGroup: Hypo...
+FAILED test_parking_fee.py::test_format_plate_output_is_well_formed - Excepti...
+========================= 8 failed, 2 passed in 0.56s ==========================
