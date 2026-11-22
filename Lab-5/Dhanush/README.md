@@ -1,5 +1,29 @@
 # Lab 5: Static Code Analysis — Music Catalog and Playlist Manager
 
+**Name:** Dhanush S S | **SRN:** PES1UG24AM082 | **Section:** B
+
+## Submission
+
+| File | Description |
+|------|-------------|
+| `music_catalog.py` | Cleaned version of the program |
+| `issues.md` | Issue table (type, lines, description, fix approach) |
+| `reflection.md` | Answers to the reflection questions |
+| `reports/before/` | Pylint, Flake8 and Bandit output on the original code |
+| `reports/after/` | Pylint, Flake8 and Bandit output after the fixes |
+
+| Tool | Before | After |
+|------|--------|-------|
+| Pylint | 4.57/10 | 10.00/10 |
+| Flake8 | 7 issues | 0 issues |
+| Bandit | 4 issues (2 medium, 2 low) | 0 issues |
+
+The original code is in the commit history (`Lab-5 (Dhanush): add original music_catalog.py and before reports`).
+
+---
+
+## Lab handout
+
 **Your file:** `music_catalog.py`
 
 Follow the lab handout for the full instructions.
